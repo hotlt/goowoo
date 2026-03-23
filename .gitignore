@@ -1,0 +1,9 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[co]
+
+# Distribution / packaging
+*.skill
+
+# macOS
+.DS_Store
