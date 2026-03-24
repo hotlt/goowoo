@@ -329,6 +329,74 @@
             color: var(--primary);
         }
 
+        /* Changelog */
+        .changelog {
+            background: linear-gradient(180deg, #f8fafc 0%, white 100%);
+            padding: 80px 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .changelog h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 48px;
+            color: var(--text);
+        }
+
+        .changelog-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .changelog-item {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-left: 4px solid var(--primary);
+        }
+
+        .changelog-date {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .changelog-content ul {
+            margin: 8px 0 0 0;
+            padding-left: 20px;
+        }
+
+        .changelog-content li {
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            background: #e0e7ff;
+            color: #4f46e5;
+        }
+
+        .badge.security {
+            background: #fef3c7;
+            color: #d97706;
+        }
+
+        .badge.new {
+            background: #d1fae5;
+            color: #059669;
+        }
+
         /* Scenarios */
         .scenarios {
             padding: 0 24px 80px;
@@ -513,6 +581,7 @@
             <a href="#commands">命令</a>
             <a href="#install">安装</a>
             <a href="#scenarios">场景</a>
+            <a href="#changelog">更新</a>
         </div>
         <a href="#" class="nav-cta">🚀 立即使用</a>
     </nav>
@@ -688,6 +757,46 @@
                 <div class="scenario-icon">📚</div>
                 <h4>知识积累</h4>
                 <p>学习心得、经验总结</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Changelog Section -->
+    <section class="changelog" id="changelog">
+        <h2>📝 更新日志</h2>
+        <div class="changelog-list">
+            <div class="changelog-item">
+                <div class="changelog-date">v2.1 · 2026-03-24</div>
+                <div class="changelog-content">
+                    <span class="badge security">🔒 安全加固</span>
+                    <ul>
+                        <li>单条内容最大限制 1MB，防止恶意填充</li>
+                        <li>关键词长度限制 10KB</li>
+                        <li>stats 显示数据库大小，超过 100MB 警告</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="changelog-item">
+                <div class="changelog-date">v2.0 · 2026-03-23</div>
+                <div class="changelog-content">
+                    <span class="badge new">✨ 新功能</span>
+                    <ul>
+                        <li>热点优先检索：检索次数越多排序越靠前</li>
+                        <li>重复内容合并：相似度检测自动提示</li>
+                        <li>定时备份：覆盖式备份防数据丢失</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="changelog-item">
+                <div class="changelog-date">v1.0 · 2026-03-22</div>
+                <div class="changelog-content">
+                    <span class="badge">🚀 首发</span>
+                    <ul>
+                        <li>SQLite + FTS5 全文检索</li>
+                        <li>关键词自动提取</li>
+                        <li>分类标签管理</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
